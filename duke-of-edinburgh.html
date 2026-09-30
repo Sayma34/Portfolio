@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Duke of Edinburgh Award - Bronze</title>
+  <style>
+    :root {
+      --pink: #ff2d8b;
+      --yellow: #ffd600;
+      --bg: #f9e0e9;
+      --card: rgba(255, 255, 255, 0.68);
+      --text: #351526;
+      --text2: #684456;
+      --border: rgba(126, 45, 78, 0.16);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      min-height: 100vh;
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Trebuchet MS', sans-serif;
+      padding: 2rem;
+    }
+
+    main { width: min(900px, 100%); margin: 0 auto; }
+
+    .site-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .65rem 1rem;
+      align-items: center;
+      margin-bottom: 2.5rem;
+      padding: .8rem 1rem;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+
+    .site-nav a {
+      color: var(--text2);
+      font-size: .78rem;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .site-nav a:hover,
+    .site-nav a[aria-current="page"] { color: var(--pink); }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 3rem;
+      color: var(--pink);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .back-link:hover { color: var(--yellow); }
+
+    .eyebrow {
+      color: var(--pink);
+      font-size: .8rem;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-size: clamp(2.2rem, 6vw, 4.5rem);
+      line-height: 1.05;
+      margin-bottom: 1rem;
+    }
+
+    .intro {
+      max-width: 650px;
+      color: var(--text2);
+      line-height: 1.7;
+      margin-bottom: 3rem;
+    }
+
+    .content-placeholder {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+
+    .placeholder-card {
+      min-height: 180px;
+      display: grid;
+      place-items: center;
+      padding: 1.5rem;
+      text-align: center;
+      color: var(--text2);
+      background: var(--card);
+      border: 1px dashed var(--border);
+      border-radius: 16px;
+    }
+
+    @media (max-width: 650px) {
+      body { padding: 1.5rem; }
+      .content-placeholder { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <nav class="site-nav" aria-label="Site navigation">
+      <a href="portfolioooo.html">Home</a>
+      <a href="portfolioooo.html#achievements">Milestones</a>
+      <a href="aws.html">AWS</a>
+      <a href="google-cloud.html">Google Cloud</a>
+      <a href="deep-learning.html">Deep Learning</a>
+      <a href="finalists.html">Finalists</a>
+      <a href="duke-of-edinburgh.html" aria-current="page">Duke Award</a>
+    </nav>
+    <a class="back-link" href="portfolioooo.html#achievements">&lt;- Back to Milestones &amp; Recognition</a>
+    <div class="eyebrow">Duke of Edinburgh Award</div>
+    <h1>Bronze Award</h1>
+    <p class="intro">This page is ready for the pictures, experiences, and description you want to add about earning the Duke of Edinburgh Award - Bronze.</p>
+    <div class="content-placeholder">
+      <div class="placeholder-card">Pictures coming soon</div>
+      <div class="placeholder-card">Activities coming soon</div>
+      <div class="placeholder-card">Description coming soon</div>
+    </div>
+  </main>
+  <audio id="bgMusic" autoplay loop preload="auto" playsinline aria-label="Background music" style="display:none" src="Too%20Soon%20by%20Diamond%20Ace%20Electronic%20Music%20From%20The%2080s%20%28No%20Copyright%29.mp3"></audio>
+  <script>
+    const bgMusic = document.getElementById('bgMusic');
+    const savedMusicTime = Number.parseFloat(localStorage.getItem('portfolioMusicTime'));
+    const restoreMusicTime = () => { if (Number.isFinite(savedMusicTime) && Number.isFinite(bgMusic.duration)) bgMusic.currentTime = savedMusicTime; };
+    const resumeMusic = () => { bgMusic.play().catch(() => {}); };
+    bgMusic.volume = 0.6;
+    bgMusic.addEventListener('loadedmetadata', restoreMusicTime, { once: true });
+    bgMusic.addEventListener('timeupdate', () => localStorage.setItem('portfolioMusicTime', String(bgMusic.currentTime)));
+    ['pointerdown', 'keydown', 'touchstart', 'click'].forEach(eventName => document.addEventListener(eventName, resumeMusic, { once: true }));
+    document.addEventListener('visibilitychange', () => { if (!document.hidden) resumeMusic(); });
+    window.addEventListener('pagehide', () => localStorage.setItem('portfolioMusicTime', String(bgMusic.currentTime)));
+    resumeMusic();
+  </script>
+</body>
+</html>

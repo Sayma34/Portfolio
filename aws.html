@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AWS | Credentials & Licenses</title>
+  <style>
+    :root{--pink:#ff2d8b;--yellow:#ffd600;--bg:#f9e0e9;--bg2:#f4d1df;--card:rgba(255,255,255,.68);--text:#351526;--text2:#684456;--border:rgba(126,45,78,.16)}
+    *{box-sizing:border-box;margin:0;padding:0} body{min-height:100vh;background:var(--bg);color:var(--text);font-family:'Trebuchet MS',sans-serif;padding:2rem} main{width:min(1050px,100%);margin:auto}.site-nav{display:flex;flex-wrap:wrap;gap:.65rem 1rem;align-items:center;margin-bottom:2.5rem;padding:.8rem 1rem;background:var(--card);border:1px solid var(--border);border-radius:12px}.site-nav a{color:var(--text2);font-size:.78rem;font-weight:700;text-decoration:none}.site-nav a:hover,.site-nav a[aria-current="page"]{color:var(--pink)}.back{display:inline-block;margin-bottom:3rem;color:var(--pink);font-weight:700;text-decoration:none}.back:hover{color:var(--yellow)}.eyebrow{color:var(--pink);font-size:.8rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin-bottom:1rem}h1{font-size:clamp(2.3rem,6vw,4.5rem);line-height:1.05;margin-bottom:1rem}.intro{max-width:700px;color:var(--text2);line-height:1.7;margin-bottom:3rem}.badge-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.2rem}.badge-card{padding:1.5rem;background:var(--card);border:1px solid var(--border);border-radius:16px;transition:transform .3s,box-shadow .3s}.badge-card:hover{transform:translateY(-5px);box-shadow:0 18px 35px rgba(126,45,78,.14)}.badge-icon{font-size:2rem;margin-bottom:1rem}.badge-title{font-size:1.05rem;line-height:1.35;margin-bottom:.65rem}.badge-desc{color:var(--text2);font-size:.88rem;line-height:1.6;margin-top:.8rem}.badge-org,.badge-date{color:var(--text2);font-size:.85rem;line-height:1.55}.badge-date{margin-top:.7rem;color:var(--pink);font-weight:700}.credly-link{display:inline-block;margin-top:1rem;padding:.55rem .85rem;border:1px solid var(--pink);border-radius:999px;color:var(--pink);font-size:.78rem;font-weight:700;text-decoration:none;transition:background .3s,color .3s}.credly-link:hover{background:var(--pink);color:#fff}footer{margin-top:2rem;color:var(--text2);font-size:.85rem}footer a{color:var(--pink)}
+  </style>
+</head>
+<body><main>
+  <nav class="site-nav" aria-label="Site navigation">
+    <a href="portfolioooo.html">Home</a><a href="portfolioooo.html#achievements">Milestones</a><a href="aws.html" aria-current="page">AWS</a><a href="google-cloud.html">Google Cloud</a><a href="deep-learning.html">Deep Learning</a><a href="finalists.html">Finalists</a><a href="duke-of-edinburgh.html">Duke Award</a>
+  </nav>
+  <a class="back" href="portfolioooo.html#certifications">← Back to Credentials & Licenses</a>
+  <div class="eyebrow">Credly credentials</div><h1>AWS</h1>
+  <p class="intro">AWS badges and community learning records from Sayma Shahid's public Credly profile.</p>
+  <div class="badge-grid">
+    <article class="badge-card"><div class="badge-icon">☁️</div><h2 class="badge-title">AWS Educate Machine Learning Foundations - Training Badge</h2><div class="badge-org">Amazon Web Services Training and Certification</div><p class="badge-desc">Foundational machine learning concepts and the AWS services used to build and understand ML solutions.</p><div class="badge-date">Issued Jun 23, 2025</div><a class="credly-link" href="https://www.credly.com/badges/50c89fbb-ad34-45b7-a601-d6535626af70/linked_in_profile" target="_blank" rel="noopener noreferrer">View on Credly ↗</a></article>
+    <article class="badge-card"><div class="badge-icon">🤝</div><h2 class="badge-title">AWS Student Community Day Participant</h2><div class="badge-org">AWS Community</div><p class="badge-desc">Participation in the AWS student community and its cloud learning and networking activities.</p><div class="badge-date">Issued Jan 9, 2026</div><a class="credly-link" href="https://www.credly.com/badges/0abd8e9b-ff3f-47a7-9d60-7c91e2c04dc9/linked_in_profile" target="_blank" rel="noopener noreferrer">View on Credly ↗</a></article>
+    <article class="badge-card"><div class="badge-icon">🏗️</div><h2 class="badge-title">AWS Cloud Clubs Infrastructure Camper</h2><div class="badge-org">AWS Community</div><p class="badge-desc">Hands-on cloud infrastructure learning through the AWS Cloud Clubs community.</p><div class="badge-date">Issued Nov 14, 2023</div><a class="credly-link" href="https://www.credly.com/badges/60598043-56e2-4b11-aa78-7b188856cced/linked_in_profile" target="_blank" rel="noopener noreferrer">View on Credly ↗</a></article>
+  </div>
+  <footer>Source: <a href="https://www.credly.com/users/sayma-shahid/badges" target="_blank" rel="noopener noreferrer">Sayma Shahid on Credly</a></footer>
+</main>
+<audio id="bgMusic" autoplay loop preload="auto" playsinline aria-label="Background music" style="display:none" src="Too%20Soon%20by%20Diamond%20Ace%20Electronic%20Music%20From%20The%2080s%20%28No%20Copyright%29.mp3"></audio>
+<script>
+  const bgMusic = document.getElementById('bgMusic');
+  const savedMusicTime = Number.parseFloat(localStorage.getItem('portfolioMusicTime'));
+  const restoreMusicTime = () => { if (Number.isFinite(savedMusicTime) && Number.isFinite(bgMusic.duration)) bgMusic.currentTime = savedMusicTime; };
+  const resumeMusic = () => { bgMusic.play().catch(() => {}); };
+  bgMusic.volume = 0.6;
+  bgMusic.addEventListener('loadedmetadata', restoreMusicTime, { once: true });
+  bgMusic.addEventListener('timeupdate', () => localStorage.setItem('portfolioMusicTime', String(bgMusic.currentTime));
+  ['pointerdown', 'keydown', 'touchstart', 'click'].forEach(eventName => document.addEventListener(eventName, resumeMusic, { once: true }));
+  document.addEventListener('visibilitychange', () => { if (!document.hidden) resumeMusic(); });
+  window.addEventListener('pagehide', () => localStorage.setItem('portfolioMusicTime', String(bgMusic.currentTime)));
+  resumeMusic();
+</script>
+</body>
+</html>
